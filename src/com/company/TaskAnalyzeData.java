@@ -15,7 +15,7 @@ public class TaskAnalyzeData {
         );
 
         System.out.println("Военнообязанные:");
-        people.stream().filter(x -> x.getSex() == Sex.MAN).forEach(System.out::println);
+        people.stream().filter(x -> x.getSex() == Sex.MAN).filter(x -> x.getAge() >= 18 && x.getAge() <= 27).forEach(System.out::println);
 
         System.out.println("Средний возраст мужчин:");
         // Если одни только женщины, исключение вылетает, потому что пустое значение хотим конвертировать в double.
